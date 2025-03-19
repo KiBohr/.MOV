@@ -20,8 +20,6 @@ const StartPage = () => {
             <a className="h-10 w-15" href="https://developer.themoviedb.org/docs/getting-started">
             <img className="object-cover" src="../../../public/tmd-logo.svg" alt="logo of TMDB" />
             </a>
-
-        
         </section>
      );
 }
