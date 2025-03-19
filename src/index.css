@@ -7,21 +7,25 @@ footer button::before {
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: #f52d2a;
+	background-color: var(--color-red);
 }
 
 @theme {
-    /* colors: */
-      --color-red: #FC2121;
-      --color-text-black: #FFFFFF;
-      --color-bg: #000000;
-    }
-    
-    @font-face {
-      font-family: Poppins;
-      font-style: normal;
-      font-weight: 200 700;
-      src: url("../public/fonts/Poppins-Regular.ttf") format("woff2");
-    }
-  
+	/* colors: */
+	--color-red: #fc2121;
+	--color-red-light: #fff3f3;
+	--color-text-black: #ffffff;
+	--color-bg: #000000;
+	--color-grey-light: #e6e6e6;
+}
 
+@font-face {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 200 700;
+	src: url("../public/fonts/Montserrat.ttf") format(".ttf");
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
