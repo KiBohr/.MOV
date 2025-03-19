@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
 	return (
-		<footer className="w-100 flex justify-evenly gap-2.5 py-2.5 fixed bottom-0 left-[50%] translate-x-[-50%]">
+		<footer className="w-100 flex justify-evenly gap-2.5 py-2.5 fixed bottom-0 left-[50%] translate-x-[-50%] bg-red-light">
 			<Link to="/home">
 				<button type="button" className="relative">
 					<img src="/public/home-icon.png" alt="Home-Icon" title="Home-Icon" aria-label="Home-Icon" />
