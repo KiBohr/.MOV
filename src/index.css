@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+footer button::before {
+	position: absolute;
+	content: "";
+	bottom: -8px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #f52d2a;
+}
