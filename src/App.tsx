@@ -7,6 +7,8 @@ import {
 import { Layout } from "./layout/Layout";
 import StartPage from "./pages/startPage/StartPage";
 import { Home } from "./pages/home/Home";
+import { GenreView } from "./pages/GenreView";
+import { MovieDetail } from "./pages/MovieDetail";
 
 export function App() {
 	//hier kommt ein useState hin
@@ -14,11 +16,12 @@ export function App() {
 	//router
 	const router = createBrowserRouter(
 		createRoutesFromElements(
-			<Route path="/" element={<Layout />}>
+			<Route path='/' element={<Layout />}>
 				{/* hier kommen die einzelnen Routen zu den Seiten hin */}
-				<Route path="/home" element={<Home/>}/>
-				<Route index element={<StartPage/>}/>
-				
+				<Route path='/home' element={<Home />} />
+				<Route index element={<StartPage />} />
+				<Route path='/genre/:genreId' element={<GenreView />} />
+				<Route path='/:movieParam' element={<MovieDetail />} />
 			</Route>
 		)
 	);

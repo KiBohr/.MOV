@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { Movie } from "../contracts/interfaces";
+import { Genre, Movie } from "../contracts/interfaces";
 import axios from "axios";
 
 //hier kommt noch ein Interface für den Context hin
@@ -14,12 +14,7 @@ export interface MovieContext {
 	setLoading?: (value: boolean) => void;
 	error: string | null;
 	setError?: () => void;
-	actionMovies: Movie[];
-	setActionMovie?: (list: Movie[]) => void;
-	comedyMovies: Movie[];
-	setComedynMovie?: (list: Movie[]) => void;
-	horrorMovies: Movie[];
-	setHorrornMovie?: (list: Movie[]) => void;
+	genres: Genre[] | undefined;
 }
 
 export const mainContext = createContext<MovieContext | null>(null);
@@ -33,9 +28,7 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 
 	const [allMovies, setAllMovies] = useState<Movie[]>([]);
 
-	const [actionMovies, setActionMovies] = useState<Movie[]>([]);
-	const [comedyMovies, setComedyMovies] = useState<Movie[]>([]);
-	const [horrorMovies, setHorrorMovies] = useState<Movie[]>([]);
+	const [genres, setGenres] = useState<Genre[] | undefined>();
 
 	//hier kommen 'useEffect' und Path zum Fetchen hin
 	//Trending Movies:
@@ -110,23 +103,15 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 		fetchAllMovies();
 	}, []);
 
-	//Action Movies:
-	const fetchActionMovies = async () => {
+	//Genre Movies:
+	const fetchGenres = async () => {
 		try {
 			setLoading(true);
 			setError(null);
-
 			const options = {
 				method: "GET",
-				url: "https://api.themoviedb.org/3/discover/movie",
-				params: {
-					include_adult: "false",
-					include_video: "false",
-					language: "en-US",
-					page: "1",
-					sort_by: "popularity.desc",
-					with_genres: "28",
-				},
+				url: "https://api.themoviedb.org/3/genre/movie/list",
+				params: { language: "en" },
 				headers: {
 					accept: "application/json",
 					Authorization:
@@ -135,95 +120,20 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 			};
 
 			const response = await axios.request(options);
-			setActionMovies(response.data.results);
-			setFilterdMovies(response.data.results);
-			console.log(response);
+
+			console.log("Genre suche", response);
+
+			setGenres(response.data.genres);
 		} catch (error) {
-			setError("hier ist was schief gelaufen beim Laden der Filme.");
+			setError("hier ist was schief gelaufen beim Laden der Genres.");
 		} finally {
 			setLoading(false);
 		}
 	};
-	//useEffect für den Fetch der ActionMovies:
+
+	//useEffect für den Fetch der Genres:
 	useEffect(() => {
-		fetchActionMovies();
-	}, []);
-
-	//ComedyMovies:
-	const fetchComedyMovies = async () => {
-		try {
-			setLoading(true);
-			setError(null);
-
-			const options = {
-				method: "GET",
-				url: "https://api.themoviedb.org/3/discover/movie",
-				params: {
-					include_adult: "false",
-					include_video: "false",
-					language: "en-US",
-					page: "1",
-					sort_by: "popularity.desc",
-					with_genres: "35",
-				},
-				headers: {
-					accept: "application/json",
-					Authorization:
-						"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNTUwZjU2MDQyYjdkYWY1YzllMWZkYzlkYjE0ODRiYyIsIm5iZiI6MTc0MjM3MzM1MS41MzEwMDAxLCJzdWIiOiI2N2RhODFlN2FlNGE4ZDFiMGZhNmQ1ODciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.j1lfwnNm_qPhR7UmXese9qJpF-N6ZItLlZtZNmPj_4k",
-				},
-			};
-
-			const response = await axios.request(options);
-			setComedyMovies(response.data.results);
-			setFilterdMovies(response.data.results);
-			console.log("comedyMovies: ", response);
-		} catch (error) {
-			setError("hier ist was schief gelaufen beim Laden der Filme.");
-		} finally {
-			setLoading(false);
-		}
-	};
-	//useEffect für den Fetch der ComedyMovies:
-	useEffect(() => {
-		fetchComedyMovies();
-	}, []);
-
-	const fetchHorrorMovies = async () => {
-		try {
-			setLoading(true);
-			setError(null);
-
-			const options = {
-				method: "GET",
-				url: "https://api.themoviedb.org/3/discover/movie",
-				params: {
-					include_adult: "false",
-					include_video: "false",
-					language: "en-US",
-					page: "1",
-					sort_by: "popularity.desc",
-					with_genres: "27",
-				},
-				headers: {
-					accept: "application/json",
-					Authorization:
-						"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNTUwZjU2MDQyYjdkYWY1YzllMWZkYzlkYjE0ODRiYyIsIm5iZiI6MTc0MjM3MzM1MS41MzEwMDAxLCJzdWIiOiI2N2RhODFlN2FlNGE4ZDFiMGZhNmQ1ODciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.j1lfwnNm_qPhR7UmXese9qJpF-N6ZItLlZtZNmPj_4k",
-				},
-			};
-
-			const response = await axios.request(options);
-			setHorrorMovies(response.data.results);
-			setFilterdMovies(response.data.results);
-			console.log("horrorMovies: ", response);
-		} catch (error) {
-			setError("hier ist was schief gelaufen beim Laden der Filme.");
-		} finally {
-			setLoading(false);
-		}
-	};
-	//useEffect für den Fetch der HorrorMovies:
-	useEffect(() => {
-		fetchHorrorMovies();
+		fetchGenres();
 	}, []);
 
 	return (
@@ -235,9 +145,7 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 				loading,
 				error,
 				allMovies,
-				actionMovies,
-				comedyMovies,
-				horrorMovies,
+				genres,
 			}}
 		>
 			{children}
