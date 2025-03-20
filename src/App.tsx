@@ -7,8 +7,8 @@ import {
 import { Layout } from "./layout/Layout";
 import StartPage from "./pages/startPage/StartPage";
 import { Home } from "./pages/home/Home";
-import { GenreView } from "./pages/GenreView";
-import { MovieDetail } from "./pages/MovieDetail";
+import { GenreView } from "./pages/genreView/GenreView";
+import { MovieDetail } from "./pages/movieDetail/MovieDetail";
 
 export function App() {
 	//hier kommt ein useState hin

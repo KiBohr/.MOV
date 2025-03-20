@@ -36,9 +36,9 @@ const StartPage = () => {
 
 						<MainButton buttonText="Get Started" path={"/home"}  />
 
-						<a className="h-10 w-15" href="https://developer.themoviedb.org/docs/getting-started">
-							<img className="object-cover" src="../../../public/tmd-logo.svg" alt="logo of TMDB" />
-						</a>
+{/* just because der footer ist sonst zu nah am button, bitte noch den footer loswerden! */}
+						<div className="mb-10"></div>
+
 					</section>
 
 					{/* Footer wird nur angezeigt, wenn `Intro` weg ist, bitte so ändern, dass es nicht mehr mit dem Footer in Verbindung steht, weil wir den footer langfristig nicht mehr in der startseite haben wollen*/}
