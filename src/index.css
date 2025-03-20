@@ -1,16 +1,6 @@
 @import "tailwindcss";
 /*@plugin "daisyui";*/
 
-footer button::before {
-	position: absolute;
-	content: "";
-	bottom: -8px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: var(--color-red);
-}
-
 @theme {
 	/* colors: */
 	--color-red: #fc2121;
