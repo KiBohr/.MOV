@@ -11,7 +11,7 @@ export const MoviePreview: React.FunctionComponent<Props> = ({ movie }) => {
 	return (
 		<>
 			<Link
-				to={`/${movie.id}`}
+				to={`/details/${movie.id}`}
 				className='shadow-lg rounded-md p-5 flex items-center justify-center gap-5 transition ease-in-out hover:shadow-2xl cursor-pointer bg-white'
 			>
 				{/* poster */}
