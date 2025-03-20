@@ -1,7 +1,7 @@
 //Ansicht der einzelenen FilmKarte in der Auflistung der Filme unter den buttons. Siehe figmal Genre/search Page
 
 import { Link } from "react-router-dom";
-import { Movie } from "../contracts/interfaces";
+import { Movie } from "../../contracts/interfaces";
 
 interface Props {
 	movie: Movie;

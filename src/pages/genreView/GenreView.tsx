@@ -2,11 +2,11 @@
 
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { mainContext, MovieContext } from "../context/MainProvider";
-import MainButton from "../components/mainButton/MainButton";
+import { mainContext, MovieContext } from "../../context/MainProvider";
+import MainButton from "../../components/mainButton/MainButton";
 import axios from "axios";
-import { Movie } from "../contracts/interfaces";
-import { MoviePreview } from "../components/MoviePreview";
+import { Movie } from "../../contracts/interfaces";
+import { MoviePreview } from "../../components/moviePreview/MoviePreview";
 
 export const GenreView = () => {
 	const { genreId } = useParams();

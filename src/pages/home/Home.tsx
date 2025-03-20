@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./home.css"
-import SearchField from "../../components/searchField/searchField";
 import FilterButtons from "../../components/filterButtons/FilterButtons";
+import SearchField from "../../components/searchField/SearchField";
 
 
 export const Home = () => {
@@ -24,7 +24,7 @@ export const Home = () => {
 
 				<div className="flex justify-between font-bold px-2 pt-[5vh]">
 					<p className="text-black">Trending Videos</p>
-					<button type="button" className="text-[red]">See all</button>
+					<Link to="/genre/:genreId" className="text-red transition hover:text-red/70">See all</Link>
 				</div>
 
 				{/* Carousel */}
