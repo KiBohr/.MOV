@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/*@plugin "daisyui";*/
 
 footer button::before {
 	position: absolute;
@@ -17,6 +18,7 @@ footer button::before {
 	--color-text-black: #ffffff;
 	--color-bg: #000000;
 	--color-grey-light: #e6e6e6;
+	--color-white: #ffffff;
 }
 
 @font-face {
@@ -28,4 +30,5 @@ footer button::before {
 
 body {
 	font-family: "Montserrat", sans-serif;
+	background-color: var(--color-white);
 }
