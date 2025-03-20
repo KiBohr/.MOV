@@ -18,18 +18,17 @@ export const MovieDetail = () => {
 
 	const [movieItem, setMovieItem] = useState<MovieDetails>();
 
-	const options = {
-		method: "GET",
-		url: `https://api.themoviedb.org/3/movie/${movieParam}`,
-		params: { language: "en-US" },
-		headers: {
-			accept: "application/json",
-			Authorization:
-				"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNTUwZjU2MDQyYjdkYWY1YzllMWZkYzlkYjE0ODRiYyIsIm5iZiI6MTc0MjM3MzM1MS41MzEwMDAxLCJzdWIiOiI2N2RhODFlN2FlNGE4ZDFiMGZhNmQ1ODciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.j1lfwnNm_qPhR7UmXese9qJpF-N6ZItLlZtZNmPj_4k",
-		},
-	};
-
 	useEffect(() => {
+		const options = {
+			method: "GET",
+			url: `https://api.themoviedb.org/3/movie/${movieParam}`,
+			params: { language: "en-US" },
+			headers: {
+				accept: "application/json",
+				Authorization:
+					"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNTUwZjU2MDQyYjdkYWY1YzllMWZkYzlkYjE0ODRiYyIsIm5iZiI6MTc0MjM3MzM1MS41MzEwMDAxLCJzdWIiOiI2N2RhODFlN2FlNGE4ZDFiMGZhNmQ1ODciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.j1lfwnNm_qPhR7UmXese9qJpF-N6ZItLlZtZNmPj_4k",
+			},
+		};
 		const fetchMovieData = async () => {
 			try {
 				const response = await axios.request(options);
@@ -42,10 +41,10 @@ export const MovieDetail = () => {
 			}
 		};
 		fetchMovieData();
-	}, []);
+	}, [movieParam]);
 
 	if (!movieItem) {
-		return <div>loading…</div>;
+		return <div>loading…{movieParam}</div>;
 	}
 
 	return (
