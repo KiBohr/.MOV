@@ -56,6 +56,9 @@ export const GenreView = () => {
 
 	return (
 		<>
+		{/* hier werden die Genres in die MainButton Componente gemappt und gerendert.
+		Ziel ist es, diese in einem Slider anzuzeugen und als eigene Komponente auszulagern und auch in Home einzubinden */}
+		<div className="grid grid-cols-3 gap-2 p-5">
 			{genres.map((genre) => (
 				<MainButton
 					key={genre.id}
@@ -63,7 +66,9 @@ export const GenreView = () => {
 					path={`/genre/${genre.id}`}
 				/>
 			))}
-			<div>
+		</div>
+			
+			<div className="grid grid-cols-1 gap-3 p-5 bg-grey-light">
 				{isLoading && <div>Lädt Filme für genre {currentGenre?.name}</div>}
 				{genreMovies.map((movie) => (
 					<MoviePreview movie={movie} key={movie.id} />
