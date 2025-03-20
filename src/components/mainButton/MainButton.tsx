@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 interface IMainButtonProps{
     buttonText: string,
-    path?: {},
+    path: string,
 }
 
 const MainButton = ({buttonText, path}:IMainButtonProps) => {
