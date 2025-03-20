@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Intro from "../../components/intro/Intro";
 import MainButton from "../../components/mainButton/MainButton";
-import { Home } from "../home/Home";
 import { Footer } from "../../components/footer/Footer"; // Footer importieren
 
 const StartPage = () => {
@@ -35,14 +34,14 @@ const StartPage = () => {
 
 						<p className="w-[85%] text-center">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
 
-						<MainButton buttonText="Get Started" />
+						<MainButton buttonText="Get Started" path={"/home"}  />
 
 						<a className="h-10 w-15" href="https://developer.themoviedb.org/docs/getting-started">
 							<img className="object-cover" src="../../../public/tmd-logo.svg" alt="logo of TMDB" />
 						</a>
 					</section>
 
-					{/* Footer wird nur angezeigt, wenn `Intro` weg ist */}
+					{/* Footer wird nur angezeigt, wenn `Intro` weg ist, bitte so ändern, dass es nicht mehr mit dem Footer in Verbindung steht, weil wir den footer langfristig nicht mehr in der startseite haben wollen*/}
 					{fadeIn && <Footer />}
 				</div>
 			)}

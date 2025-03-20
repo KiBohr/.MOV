@@ -4,13 +4,13 @@ import { Footer } from "../components/footer/Footer";
 export const Layout = () => {
 	const location = useLocation();
 
-	//hier die zu versteckenden Componenten
-	const hideHeader = location.pathname === "";
+	//hier schränken wir das Anzeigen von der Footer Componente ein
+	const hideFooter = location.pathname === "/" || location.pathname === ""
 
 	return (
 		<>
 			<Outlet />
-			<Footer />
+			{!hideFooter && <Footer/>}
 		</>
 	);
 };
