@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
 @theme {
 	/* colors: */
 	--color-red: #fc2121;

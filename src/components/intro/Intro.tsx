@@ -2,7 +2,7 @@ import "./Intro.css"
 
 export default function Intro() {
 	return (
-		<div className="min-h-[calc(100dvh-52px)] grid place-items-center z-20 bg-[red]">
+		<div className="min-h-[100vh] grid place-items-center z-20 bg-[red]">
 			<h1 className="intro-line text-white font-bold text-4xl">
 				<span>.</span>
 				<span>M</span>
