@@ -48,48 +48,56 @@ export const MovieDetail = () => {
 	}
 
 	return (
-		<div>
-			<div>
-				<img
+		<div className="bg-white flex flex-col items-center justify-center">
+			<div className="h-110 w-full overflow-hidden">
+				<img className="object-cover rounded-t-3xl "
 					src={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`}
 					alt={movieItem.title}
 				/>
 			</div>
 			<div>
-				<h3>Movie Details</h3>
-				<p>{movieItem.title}</p>
-				<div>
-					<p>⭐️{movieItem.vote_average}</p>
-					<p>{movieItem.release_date}</p>
-					<p>{movieItem.genres[0].name}</p>
-					<p>{movieItem.runtime}</p>
+				<div className="flex flex-col items-center justify-center w-full mb-5">
+					{/* teil, der über dem bild angeziegt werden soll */}
+						{/* <h3 className="text-[0.8rem]">Movie Details</h3> */}
+					<p className="text-2xl font-bold">{movieItem.title}</p>
+					<div className="flex gap-10 items-center justify-center">
+						<p>⭐️{movieItem.vote_average}</p>
+						<p>{movieItem.release_date}</p>
+						<p>{movieItem.genres[0].name}</p>
+						<p>{movieItem.runtime}</p>
+					</div>
 				</div>
 
-				<h1>Overview</h1>
-				<p>
-					{movieItem.overview.length > 100 && !showOverview
-						? movieItem.overview.slice(0, 100) + "..."
-						: movieItem.overview}
-				</p>
-				<a onClick={toggleOverview} className='text-main-red'>
-					{showOverview ? " See less..." : " See more..."}
-				</a>
+				<div className="flex flex-col items-start px-5 gap-2">
+				<h1 className="text-lg font-bold">Overview</h1>
 
-				<div>
-					<p>Genres</p>
-					<div>
+				<div className="flex flex-col mb-5">
+						<p className="w-[90%] font-light">
+						{movieItem.overview.length > 100 && !showOverview
+							? movieItem.overview.slice(0, 110) + "..."
+							: movieItem.overview}
+					</p>
+					<a onClick={toggleOverview} className='text-red text-[0.8rem]'>
+						{showOverview ? " See less..." : " See more..."}
+					</a>
+				</div>
+				
+				<div className="flex items-center justify-between w-full">
+					<p className="font-bold">Genres</p>
+					<div className="flex gap-2 font-light">
 						{movieItem.genres.map((genre) => (
 							<p>{genre.name}</p>
 						))}
 					</div>
 				</div>
-				<div>
-					<p>Languages</p>
-					<div>
+				<div className="flex items-center justify-between w-full">
+					<p className="font-bold">Languages</p>
+					<div className="flex gap-2 justify-between font-light">
 						{movieItem.spoken_languages.map((language) => (
 							<p>{language.name}</p>
 						))}
 					</div>
+				</div>
 				</div>
 			</div>
 
