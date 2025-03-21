@@ -23,3 +23,7 @@ body {
 	background-color: var(--color-white);
 	min-height: 100vh;
 }
+
+input {
+	outline: none;
+}

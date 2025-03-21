@@ -1,0 +1,7 @@
+.favorite-container {
+	display: flex;
+}
+
+.favorite-item {
+	width: calc(100vw - 5px);
+}
