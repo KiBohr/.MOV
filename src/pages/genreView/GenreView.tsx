@@ -7,6 +7,7 @@ import axios from "axios";
 import { Movie } from "../../contracts/interfaces";
 import { MoviePreview } from "../../components/moviePreview/MoviePreview";
 import { FilterButtons } from "../../components/filterButtons/FilterButtons";
+import SearchField from "../../components/searchField/SearchField";
 
 export const GenreView = () => {
 	const { genreId } = useParams();
@@ -55,12 +56,15 @@ export const GenreView = () => {
 	}
 
 	return (
-		<div>
+		<div className="px-5 py-2">
 			{/* hier werden die Genres in die MainButton Componente gemappt und gerendert.
 		Ziel ist es, diese in einem Slider anzuzeugen und als eigene Komponente auszulagern und auch in Home einzubinden */}
-			<FilterButtons activeGenre={currentGenre} />
-
-			<div className='grid grid-cols-1 gap-3 p-5 bg-grey-light'>
+			<div className="flex flex-col items-center justify-center gap-2 mb-5">
+				<SearchField/>
+				<FilterButtons activeGenre={currentGenre} />
+			</div>
+			
+			<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
 				{isLoading && <div>Lädt Filme für genre {currentGenre?.name}</div>}
 				{genreMovies.map((movie) => (
 					<MoviePreview movie={movie} key={movie.id} />
