@@ -51,7 +51,7 @@ export const MovieDetail = () => {
 	return (
 		<div className="bg-white flex flex-col items-center justify-center">
 			<div className="relative">
-				<Link className="bg-white rounded-2xl p-3 absolute top-5 left-5 z-2 transition ease-in-out hover:bg-white/70" to="/genre/:genreId"><img src="/public/backArrow.png" alt="back icon" /></Link>
+				<Link className="bg-white rounded-2xl p-3 absolute top-5 left-5 z-2 transition ease-in-out hover:bg-white/70" to="/genre/:genreId"><img src="/public/img/backArrow.png" alt="back icon" /></Link>
 				<div className="h-110 w-full overflow-hidden relative mb-10">
 					<img className="object-cover rounded-t-3xl "
 						src={`https://image.tmdb.org/t/p/w500${movieItem.poster_path}`}
@@ -95,7 +95,7 @@ export const MovieDetail = () => {
 							))}
 							</div>
 						</div>
-					<div className="flex items-center justify-between w-full">
+					<div className="flex items-center justify-between w-full pb-[5vh]">
 						<p className="font-bold">Languages</p>
 						<div className="flex gap-2 justify-between font-light">
 							{movieItem.spoken_languages.map((language) => (
