@@ -1,46 +1,18 @@
-export default function Carousel() {
-	return (
-		<>
-			{/* Carousel */}
-			<div className="h-2/5 mt-4 pb-32 rounded-2xl" >
-				<div className="carousel rounded-box">
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-							alt="Burger" />
-					</div>
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-							alt="Burger" />
-					</div>
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-							alt="Burger" />
-					</div>
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-							alt="Burger" />
-					</div>
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-							alt="Burger" />
-					</div>
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-							alt="Burger" />
-					</div>
-					<div className="carousel-item">
-						<img
-							src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-							alt="Burger" />
-					</div>
-				</div>
-			</div>
-		</>
-	)
+import { ReactElement } from "react";
+
+interface Props {
+	items: ReactElement[];
 }
+
+export const Carousel: React.FunctionComponent<Props> = ({ items }) => {
+	if (!items || items.length < 0) {
+		return <div>loading…</div>;
+	}
+	return (
+		<div className='carousel rounded-box'>
+			{items.map((item) => (
+				<div className='carousel-item'>{item}</div>
+			))}
+		</div>
+	);
+};

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { mainContext, MovieContext } from "../../context/MainProvider";
 import { Link } from "react-router-dom";
-import { Carousel } from "../Carousel";
+import { Carousel } from "../carousel/Carousel";
 import { Genre } from "../../contracts/interfaces";
 
 interface Props {
