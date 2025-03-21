@@ -8,6 +8,7 @@ import { Movie } from "../../contracts/interfaces";
 import { MoviePreview } from "../../components/moviePreview/MoviePreview";
 import { FilterButtons } from "../../components/filterButtons/FilterButtons";
 import SearchField from "../../components/searchField/SearchField";
+import { Footer } from "../../components/footer/Footer";
 
 export const GenreView = () => {
 	const { genreId } = useParams();
@@ -70,6 +71,7 @@ export const GenreView = () => {
 					<MoviePreview movie={movie} key={movie.id} />
 				))}
 			</div>
+			<Footer/>
 		</div>
 	);
 };

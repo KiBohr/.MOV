@@ -5,12 +5,12 @@ export const Layout = () => {
 	const location = useLocation();
 
 	//hier schränken wir das Anzeigen von der Footer Componente ein
-	const hideFooter = location.pathname === "/" || location.pathname === ""
+	// const hideFooter = location.pathname === "/" || location.pathname === ""
 
 	return (
 		<>
 			<Outlet />
-			{!hideFooter && <Footer/>}
+			{/* {!hideFooter && <Footer/>} */}
 		</>
 	);
 };

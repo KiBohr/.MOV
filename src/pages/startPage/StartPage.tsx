@@ -38,7 +38,7 @@ const StartPage = () => {
 
 					</section>
 					{/* Footer wird nur angezeigt, wenn `Intro` weg ist, bitte so ändern, dass es nicht mehr mit dem Footer in Verbindung steht, weil wir den footer langfristig nicht mehr in der startseite haben wollen*/}
-					{fadeIn && <Footer />}
+					{fadeIn}
 				</div>
 			)}
 		</>

@@ -6,6 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { MovieDetails } from "../../contracts/interfaces";
+import { Footer } from "../../components/footer/Footer";
 
 export const MovieDetail = () => {
 	const { movieParam } = useParams();
@@ -102,6 +103,8 @@ export const MovieDetail = () => {
 			</div>
 
 			{/* <MainButton buttonText="Trailer" to={}/> */}
+
+			<Footer/>
 		</div>
 	);
 };
