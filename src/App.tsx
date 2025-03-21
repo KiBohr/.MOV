@@ -28,7 +28,7 @@ export function App() {
 		)
 	);
 	return (
-		<main>
+		<main className="bg-grey-light">
 			<RouterProvider router={router} />
 		</main>
 	);
