@@ -3,10 +3,10 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { mainContext, MovieContext } from "../../context/MainProvider";
-import MainButton from "../../components/mainButton/MainButton";
 import axios from "axios";
 import { Movie } from "../../contracts/interfaces";
 import { MoviePreview } from "../../components/moviePreview/MoviePreview";
+import { FilterButtons } from "../../components/filterButtons/FilterButtons";
 
 export const GenreView = () => {
 	const { genreId } = useParams();
@@ -55,25 +55,17 @@ export const GenreView = () => {
 	}
 
 	return (
-		<>
-		{/* hier werden die Genres in die MainButton Componente gemappt und gerendert.
+		<div>
+			{/* hier werden die Genres in die MainButton Componente gemappt und gerendert.
 		Ziel ist es, diese in einem Slider anzuzeugen und als eigene Komponente auszulagern und auch in Home einzubinden */}
-		<div className="grid grid-cols-3 gap-2 p-5">
-			{genres.map((genre) => (
-				<MainButton
-					key={genre.id}
-					buttonText={genre.name}
-					path={`/genre/${genre.id}`}
-				/>
-			))}
-		</div>
-			
-			<div className="grid grid-cols-1 gap-3 p-5 bg-grey-light">
+			<FilterButtons activeGenre={currentGenre} />
+
+			<div className='grid grid-cols-1 gap-3 p-5 bg-grey-light'>
 				{isLoading && <div>Lädt Filme für genre {currentGenre?.name}</div>}
 				{genreMovies.map((movie) => (
 					<MoviePreview movie={movie} key={movie.id} />
 				))}
 			</div>
-		</>
+		</div>
 	);
 };
