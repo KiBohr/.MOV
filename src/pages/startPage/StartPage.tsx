@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Intro from "../../components/intro/Intro";
 import MainButton from "../../components/mainButton/MainButton";
-import { Footer } from "../../components/footer/Footer"; // Footer importieren
+
 
 const StartPage = () => {
 	const [showIntro, setShowIntro] = useState(true);
