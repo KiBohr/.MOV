@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
 @theme {
 	/* colors: */
 	--color-red: #fc2121;
@@ -22,4 +21,5 @@
 body {
 	font-family: "Montserrat", sans-serif;
 	background-color: var(--color-white);
+	min-height: 100vh;
 }

@@ -27,16 +27,16 @@ const StartPage = () => {
 							<img className="block object-cover" src="/public/intro-img.png" alt="Screenshots of the app" />
 						</div>
 
-						<div className="flex flex-col items-center text-2xl font-bold">
+						<div className="flex flex-col items-center text-2xl font-bold text-black">
 							<h2>Enjoy Your Movie</h2>
 							<h2>Watch Everywhere</h2>
 						</div>
 
-						<p className="w-[85%] text-center">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+						<p className="w-[85%] text-center text-black">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
 
-						<MainButton buttonText="Get Started" path={"/home"}  />
+						<MainButton buttonText="Get Started" path={"/home"} />
 
-{/* just because der footer ist sonst zu nah am button, bitte noch den footer loswerden! */}
+						{/* just because der footer ist sonst zu nah am button, bitte noch den footer loswerden! */}
 						<div className="mb-10"></div>
 
 					</section>
