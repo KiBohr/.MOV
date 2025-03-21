@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import "./home.css";
 import SearchField from "../../components/searchField/SearchField";
+
+import Carousel from "../../components/carousel/Carousel";
+
 import { FilterButtons } from "../../components/filterButtons/FilterButtons";
+
 
 export const Home = () => {
 	return (
@@ -37,6 +41,9 @@ export const Home = () => {
 				</div>
 
 				{/* Carousel */}
+
+				<Carousel />
+
 				<div className='mt-4 h-[100vh] border-4 border-b-lime-400'>
 					<div className='carousel rounded-box'>
 						<div className='carousel-item'>
