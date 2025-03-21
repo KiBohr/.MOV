@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import "./home.css";
 import SearchField from "../../components/searchField/SearchField";
 
 import { FilterButtons } from "../../components/filterButtons/FilterButtons";
-import { TrendingMoviesCarousel } from "../../components/trendingMoviesCarousel/trendingMoviesCarousel";
+import { TrendingMoviesCarousel } from "../../components/trendingMoviesCarousel/TrendingMoviesCarousel";
+import { Footer } from "../../components/footer/Footer";
+
 
 export const Home = () => {
 	return (
@@ -41,6 +42,8 @@ export const Home = () => {
 				{/* Carousel */}
 
 				<TrendingMoviesCarousel />
+				
+				<Footer/>
 
 			</article>
 		</>

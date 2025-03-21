@@ -17,7 +17,7 @@ const StartPage = () => {
 	}, []);
 
 	return (
-		<>
+		<section >
 			{showIntro ? (
 				<Intro />
 			) : (
@@ -41,7 +41,8 @@ const StartPage = () => {
 					{fadeIn}
 				</div>
 			)}
-		</>
+		</section>
+		
 	);
 };
 

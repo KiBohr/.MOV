@@ -29,7 +29,7 @@ export const MoviePreview: React.FunctionComponent<Props> = ({ movie }) => {
 						<h3 className='text-lg font-bold'>{movie.title}</h3>
 						<img
 							className='h-4 cursor-pointer'
-							src='/public/favorite-icon.png'
+							src='/public/img/favorite-icon.png'
 							alt='Favoriten Icon'
 						/>
 					</div>

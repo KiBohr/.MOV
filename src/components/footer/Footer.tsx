@@ -13,7 +13,7 @@ export const Footer = ({ showFooter = true }) => {
 	};
 
 	return (
-		<footer className="w-full flex justify-evenly gap-2.5 py-2.5 fixed bottom-0 left-[50%] translate-x-[-50%] bg-red-light transition-opacity duration-1000">
+		<footer className="w-full flex justify-evenly gap-2.5 py-2.5 fixed bottom-0 left-[50%] translate-x-[-50%] bg-red-light transition-opacity duration-1000 z-20">
 			<Link to="/home" onClick={() => handleClick("/home")}>
 				<button type="button" className={`relative ${activeButton === "/home" ? "active" : ""}`}>
 					<img src="/public/img/home-icon.png" alt="Home-Icon" title="Home-Icon" aria-label="Home-Icon" />
