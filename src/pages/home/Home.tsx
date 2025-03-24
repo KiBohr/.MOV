@@ -10,9 +10,9 @@ import "./Home.css"
 export const Home = () => {
 	return (
 		<>
-			<article className='text-black px-2.5'>
+			<article className='px-2.5'>
 				<div className='flex w-100 gap-4 items-center py-[6vh] pl-2'>
-					<h1 className='text-black text-2xl font-bold'>Welcome!</h1>
+					<h1 className='text-2xl font-bold'>Welcome!</h1>
 					<Link to='https://www.themoviedb.org/' target="_blank">
 						<img
 							className='w-2/5 opacity-40 hover:scale-105 transition-all duration-400 ease-in-out hover:opacity-100'
@@ -31,7 +31,7 @@ export const Home = () => {
 				<FilterButtons />
 
 				<div className='flex justify-between font-bold px-2 pt-[5vh] pb-[2vh]'>
-					<p className='text-black'>Trending Movies</p>
+					<p>Trending Movies</p>
 					<Link
 						to='/genre/:genreId'
 						className='see-all-button text-red transition hover:text-red/70 text-xl'

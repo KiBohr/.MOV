@@ -65,7 +65,7 @@ export const GenreView = () => {
 				<FilterButtons activeGenre={currentGenre} />
 			</div>
 
-			<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 text-black'>
+			<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
 				{isLoading && <div>Lädt Filme für genre {currentGenre?.name}</div>}
 				{genreMovies.map((movie) => (
 					<MoviePreview movie={movie} key={movie.id} />
