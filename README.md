@@ -1,5 +1,7 @@
 # 🎬 .Mov
 
+[Mov_Screenrecord.webm](https://github.com/user-attachments/assets/d3ceac60-fe7b-4256-b83e-35e94e46881a)
+
 A modern, responsive web app for discovering and browsing movies, based on the TMDb API. Built with **React**, **TypeScript**, and **Vite**.
 
 ## 🚀 Features
