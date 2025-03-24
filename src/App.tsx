@@ -9,6 +9,7 @@ import StartPage from "./pages/startPage/StartPage";
 import { Home } from "./pages/home/Home";
 import { GenreView } from "./pages/genreView/GenreView";
 import { MovieDetail } from "./pages/movieDetail/MovieDetail";
+import NotFound from "./pages/notFound/notFound";
 
 export function App() {
 	//hier kommt ein useState hin
@@ -22,8 +23,7 @@ export function App() {
 				<Route index element={<StartPage />} />
 				<Route path='/genre/:genreId' element={<GenreView />} />
 				<Route path='/details/:movieParam' element={<MovieDetail />} />
-				{/* Hier eine not found Seite/Komponente für bauen  */}
-				<Route path='*' element={<div> sorry, not found</div>} />
+				<Route path='/notFound' element={<NotFound/>} />
 			</Route>
 		)
 	);

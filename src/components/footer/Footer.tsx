@@ -19,17 +19,20 @@ export const Footer = ({ showFooter = true }) => {
 					<img src="/img/home-icon.png" alt="Home-Icon" title="Home-Icon" aria-label="Home-Icon" />
 				</button>
 			</Link>
-			<Link to="/favorites" onClick={() => handleClick("/favorites")}>
+			{/* Favoirten */}
+			<Link to="/notFound" onClick={() => handleClick("/favorites")}>
 				<button type="button" className={`relative ${activeButton === "/favorites" ? "active" : ""}`}>
 					<img src="/img/favorite-icon.png" alt="Favorite-Icon" title="Favorite-Icon" aria-label="Favorite-Icon" />
 				</button>
 			</Link>
-			<Link to="/downloads" onClick={() => handleClick("/downloads")}>
+			{/* Download */}
+			<Link to="/notFound" onClick={() => handleClick("/downloads")}>
 				<button type="button" className={`relative ${activeButton === "/downloads" ? "active" : ""}`}>
 					<img src="/img/download-icon.png" alt="Download-Icon" title="Download-Icon" aria-label="Download-Icon" />
 				</button>
 			</Link>
-			<Link to="/profile" onClick={() => handleClick("/profile")}>
+			{/* profile */}
+			<Link to="/notFound" onClick={() => handleClick("/profile")}>
 				<button type="button" className={`relative ${activeButton === "/profile" ? "active" : ""}`}>
 					<img src="/img/user-icon.png" alt="User-Icon" title="User-Icon" aria-label="User-Icon" />
 				</button>
