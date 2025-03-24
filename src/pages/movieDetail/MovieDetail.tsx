@@ -11,7 +11,7 @@ import { Footer } from "../../components/footer/Footer";
 export const MovieDetail = () => {
 	const { movieParam } = useParams();
 
-	console.log("Movie-Params: ", movieParam);
+	// console.log("Movie-Params: ", movieParam);
 
 
 	let [showOverview, setShowOverview] = useState<boolean>(false);
@@ -37,7 +37,7 @@ export const MovieDetail = () => {
 			try {
 				const response = await axios.request(options);
 				if (response) {
-					console.log(response.data);
+					// console.log(response.data);
 					setMovieItem(response.data);
 				}
 			} catch (error) {
@@ -92,7 +92,7 @@ export const MovieDetail = () => {
 
 				<div className="flex items-center justify-between w-full">
 					<p className="font-bold">Genres</p>
-					<div className="flex gap-2 font-light">
+					<div key={crypto.randomUUID()}  className="flex gap-2 font-light">
 						{movieItem.genres.map((genre) => (
 							<p>{genre.name}</p>
 						))}

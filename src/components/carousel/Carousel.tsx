@@ -9,7 +9,7 @@ export const Carousel: React.FunctionComponent<Props> = ({ items }) => {
 		return <div>loading…</div>;
 	}
 	return (
-		<div className='carousel rounded-box'>
+		<div key={crypto.randomUUID()} className='carousel rounded-box'>
 			{items.map((item) => (
 				<div className='carousel-item'>{item}</div>
 			))}

@@ -16,7 +16,7 @@ export const Home = () => {
 					<Link to='https://www.themoviedb.org/' target="_blank">
 						<img
 							className='w-2/5 opacity-40 hover:scale-105 transition-all duration-400 ease-in-out hover:opacity-100'
-							src='/public/img/tmdb-logo.svg'
+							src='img/tmdb-logo.svg'
 							alt='TMDB-LOGO'
 							title='TMDB-LOGO'
 							aria-label='TMDB-LOGO'

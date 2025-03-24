@@ -55,7 +55,7 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 			const response = await axios.request(options);
 			setTrendingMovies(response.data.results);
 			setFilterdMovies(response.data.results);
-			console.log("trendingMovies: ", response);
+			// console.log("trendingMovies: ", response);
 		} catch (error) {
 			setError("Hier ist ein Fehler beim Laden aufgetreten.");
 		} finally {
@@ -95,7 +95,7 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 			const response = await axios.request(options);
 			setAllMovies(response.data.results);
 			setFilterdMovies(response.data.results);
-			console.log("AllMovies: ", response);
+			// console.log("AllMovies: ", response);
 		} catch (error) {
 			setError("Hier ist ein Fehler beim Laden aufgetreten.");
 		} finally {
@@ -125,7 +125,7 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 
 			const response = await axios.request(options);
 
-			console.log("Genre suche", response);
+			// console.log("Genre suche", response);
 
 			setGenres(response.data.genres);
 		} catch (error) {

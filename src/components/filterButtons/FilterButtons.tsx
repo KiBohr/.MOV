@@ -23,6 +23,7 @@ export const FilterButtons: React.FunctionComponent<Props> = ({
 				<Carousel
 					items={genres.map((genre) => (
 						<Link
+							key={genre.id}
 							to={`/genre/${genre.id}`}
 							type='button'
 							className={`main-button w-32 py-2 ${activeGenre?.id === genre.id ? " bg-red text-white" : "bg-gray-100"
