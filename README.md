@@ -1,4 +1,4 @@
-# 🎬 Movie Explorer
+# 🎬 .Mov
 
 A modern, responsive web app for discovering and browsing movies, based on the TMDb API. Built with **React**, **TypeScript**, and **Vite**.
 
