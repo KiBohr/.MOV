@@ -15,6 +15,8 @@ export interface MovieContext {
 	error: string | null;
 	setError?: () => void;
 	genres: Genre[] | undefined;
+	searchInput: string;
+	setSearchInput: (value: string) => void;
 }
 
 export const mainContext = createContext<MovieContext | null>(null);
@@ -29,6 +31,8 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 	const [allMovies, setAllMovies] = useState<Movie[]>([]);
 
 	const [genres, setGenres] = useState<Genre[] | undefined>();
+
+	const [searchInput, setSearchInput] = useState<string>("");
 
 	//hier kommen 'useEffect' und Path zum Fetchen hin
 	//Trending Movies:
@@ -146,6 +150,8 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
 				error,
 				allMovies,
 				genres,
+				searchInput,
+				setSearchInput,
 			}}
 		>
 			{children}
