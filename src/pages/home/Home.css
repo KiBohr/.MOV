@@ -1,33 +1,8 @@
 .see-all-button {
 	position: relative;
-	animation: highlightButton 1.2s linear infinite;
+	transition: color 0.4s ease-in-out;
 }
 
-@keyframes highlightButton {
-	0% {
-		color: var(--color-black);
-	}
-	50% {
-		color: var(--color-red);
-	}
-	100% {
-		color: var(--color-red);
-	}
-}
-
-.see-all-button::before {
-	position: absolute;
-	content: "\27A1";
-	left: -40px;
+.see-all-button:hover {
 	color: var(--color-black);
-	animation: animateArrow 1.5s linear infinite;
-}
-
-@keyframes animateArrow {
-	0% {
-		transform: translateX(0px);
-	}
-	100% {
-		transform: translateX(10px);
-	}
 }

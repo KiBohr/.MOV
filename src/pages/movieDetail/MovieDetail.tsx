@@ -11,6 +11,9 @@ import { Footer } from "../../components/footer/Footer";
 export const MovieDetail = () => {
 	const { movieParam } = useParams();
 
+	console.log("Movie-Params: ", movieParam);
+
+
 	let [showOverview, setShowOverview] = useState<boolean>(false);
 
 	const toggleOverview = () => {
@@ -61,54 +64,54 @@ export const MovieDetail = () => {
 				</div>
 				{/* teil, der über dem bild angeziegt werden soll */}
 				<div className="flex flex-col items-center justify-center w-full mb-5 absolute top-90 right-auto">
-							{/* <h3 className="text-[0.8rem]">Movie Details</h3> */}
-						<p className="text-3xl font-bold">{movieItem.title.split(` `).slice(0,4).join(` `)} <br/></p>
-						<p className="text-3xl font-bold mb-2">{movieItem.title.split(` `).slice(4).join(` `)}</p>
-						<div className="flex gap-8 items-center justify-center">
-							<p className="cursor-pointer">⭐️{movieItem.vote_average.toFixed(1)}</p>
-							<p className="cursor-pointer">{movieItem.release_date.slice(0,4)}</p>
-							<p className="cursor-pointer">{movieItem.genres[0].name}</p>
-							<p className="cursor-pointer">{movieItem.runtime > 0 ? `${movieItem.runtime} min` : " "}</p>
-						</div>
-				</div>
-			</div>
-						{/* overview */}
-				<div className="flex flex-col items-start px-5 gap-2">
-						<h1 className="text-lg font-bold">Overview</h1>
-
-						<div className="flex flex-col mb-5">
-							<p className="w-[90%] font-light">
-							{movieItem.overview.length > 100 && !showOverview
-								? movieItem.overview.slice(0, 110) + "..."
-								: movieItem.overview}
-							</p>
-							<a onClick={toggleOverview} className='text-red text-[0.8rem] cursor-pointer'>
-							{showOverview ? " See less..." : " See more..."}
-							</a>
-						</div>
-					
-						<div className="flex items-center justify-between w-full">
-							<p className="font-bold">Genres</p>
-							<div className="flex gap-2 font-light">
-							{movieItem.genres.map((genre) => (
-								<p>{genre.name}</p>
-							))}
-							</div>
-						</div>
-					<div className="flex items-center justify-between w-full pb-[5vh]">
-						<p className="font-bold">Languages</p>
-						<div className="flex gap-2 justify-between font-light">
-							{movieItem.spoken_languages.map((language) => (
-								<p>{language.name}</p>
-							))}
-						</div>
+					{/* <h3 className="text-[0.8rem]">Movie Details</h3> */}
+					<p className="text-3xl font-bold">{movieItem.title.split(` `).slice(0, 4).join(` `)} <br /></p>
+					<p className="text-3xl font-bold mb-2">{movieItem.title.split(` `).slice(4).join(` `)}</p>
+					<div className="flex gap-8 items-center justify-center">
+						<p className="cursor-pointer">⭐️{movieItem.vote_average.toFixed(1)}</p>
+						<p className="cursor-pointer">{movieItem.release_date.slice(0, 4)}</p>
+						<p className="cursor-pointer">{movieItem.genres[0].name}</p>
+						<p className="cursor-pointer">{movieItem.runtime > 0 ? `${movieItem.runtime} min` : " "}</p>
 					</div>
 				</div>
-			
+			</div>
+			{/* overview */}
+			<div className="flex flex-col items-start px-5 gap-2">
+				<h1 className="text-lg font-bold">Overview</h1>
+
+				<div className="flex flex-col mb-5">
+					<p className="w-[90%] font-light">
+						{movieItem.overview.length > 100 && !showOverview
+							? movieItem.overview.slice(0, 110) + "..."
+							: movieItem.overview}
+					</p>
+					<a onClick={toggleOverview} className='text-red text-[0.8rem] cursor-pointer'>
+						{showOverview ? " See less..." : " See more..."}
+					</a>
+				</div>
+
+				<div className="flex items-center justify-between w-full">
+					<p className="font-bold">Genres</p>
+					<div className="flex gap-2 font-light">
+						{movieItem.genres.map((genre) => (
+							<p>{genre.name}</p>
+						))}
+					</div>
+				</div>
+				<div className="flex items-center justify-between w-full pb-[5vh]">
+					<p className="font-bold">Languages</p>
+					<div className="flex gap-2 justify-between font-light">
+						{movieItem.spoken_languages.map((language) => (
+							<p>{language.name}</p>
+						))}
+					</div>
+				</div>
+			</div>
+
 
 			{/* <MainButton buttonText="Trailer" to={}/> */}
 
-			<Footer/>
+			<Footer />
 		</div>
 	);
 };
