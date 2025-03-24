@@ -21,7 +21,7 @@ export function App() {
 				<Route path='/home' element={<Home />} />
 				<Route index element={<StartPage />} />
 				<Route path='/genre/:genreId' element={<GenreView />} />
-				<Route path='details/:movieParam' element={<MovieDetail />} />
+				<Route path='/details/:movieParam' element={<MovieDetail />} />
 				{/* Hier eine not found Seite/Komponente für bauen  */}
 				<Route path='*' element={<div> sorry, not found</div>} />
 			</Route>

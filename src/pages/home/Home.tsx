@@ -30,11 +30,11 @@ export const Home = () => {
 				{/* Filterbuttons */}
 				<FilterButtons />
 
-				<div className='flex justify-between font-bold px-2 pt-[5vh]'>
-					<p className='text-black'>Trending Videos</p>
+				<div className='flex justify-between font-bold px-2 pt-[5vh] pb-[2vh]'>
+					<p className='text-black'>Trending Movies</p>
 					<Link
 						to='/genre/:genreId'
-						className='see-all-button text-red transition hover:text-red/70 text-2xl'
+						className='see-all-button text-red transition hover:text-red/70 text-xl'
 					>
 						See all
 					</Link>

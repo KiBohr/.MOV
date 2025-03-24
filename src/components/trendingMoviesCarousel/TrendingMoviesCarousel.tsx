@@ -22,12 +22,12 @@ export const TrendingMoviesCarousel: React.FunctionComponent<Props> = ({ trendin
 			{/* Carousel */}
 			{/*<div className="h-2/5 mt-4 pb-32 rounded-2xl" >*/}
 			<div className="favorite-container carousel rounded-box rounded-2xl">
-				<Carousel items={trendingMovies.map((trendingMovies) => (
+				<Carousel items={trendingMovies.map((movie) => (
 					<Link
-						to='/genre/:genreId' key={trendingMovies.id}
+						to={`/details/${movie?.id}`} key={movie.id}
 						className="favorite-item carousel-item w-64 h-96 bg-cover bg-center rounded-xl mr-[16px] relative overflow-hidden"
 						style={{
-							backgroundImage: `url(https://image.tmdb.org/t/p/w500${trendingMovies.backdrop_path})`,
+							backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.backdrop_path})`,
 							backgroundSize: "cover",
 							backgroundPosition: "center",
 							backgroundRepeat: "no-repeat",
@@ -37,8 +37,8 @@ export const TrendingMoviesCarousel: React.FunctionComponent<Props> = ({ trendin
 						<div className="absolute inset-0 bg-black/50 z-10"></div>
 
 						<div className="absolute bottom-2 left-0 right-0 p-4 z-20 text-white">
-							<h2 className="text-4xl font-bold text-center tracking-[4px] mb-[10vh]">{!trendingMovies.title ? trendingMovies.original_title : trendingMovies.title}</h2>
-							<p className="text-2xl line-clamp-3 flex justify-end mr-5">⭐{trendingMovies.vote_average} / 10</p>
+							<h2 className="text-4xl font-bold text-center tracking-[4px] mb-[10vh]">{!movie.title ? movie.original_title : movie.title}</h2>
+							<p className="text-2xl line-clamp-3 flex justify-end mr-5">⭐{movie.vote_average} / 10</p>
 						</div>
 					</Link>
 
