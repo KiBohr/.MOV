@@ -25,9 +25,8 @@ export const FilterButtons: React.FunctionComponent<Props> = ({
 						<Link
 							to={`/genre/${genre.id}`}
 							type='button'
-							className={`w-32 p-2 ${
-								activeGenre?.id === genre.id ? "bg-red" : "bg-gray-100"
-							}  rounded-xl text-center mx-2 hover:bg-red/60 hover:ease-in-out hover:duration-500 hover:text-white`}
+							className={`w-32 py-4 ${activeGenre?.id === genre.id ? " bg-red text-white" : "bg-gray-100"
+								}  rounded-xl text-center text-black mx-2 hover:bg-red/60 hover:ease-in-out hover:duration-700 hover:text-white`}
 						>
 							{genre.name}
 						</Link>

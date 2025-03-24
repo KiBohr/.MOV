@@ -9,6 +9,7 @@
 	--color-bg: #000000;
 	--color-grey-light: #e6e6e6;
 	--color-white: #ffffff;
+	--transition: 0.4s all ease-in-out;
 }
 
 @font-face {
@@ -22,8 +23,11 @@ body {
 	font-family: "Montserrat", sans-serif;
 	background-color: var(--color-white);
 	min-height: 100vh;
+	color: var(--color-black);
 }
 
-input {
+input,
+button {
 	outline: none;
+	border: none;
 }

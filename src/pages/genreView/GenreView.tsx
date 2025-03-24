@@ -57,21 +57,21 @@ export const GenreView = () => {
 	}
 
 	return (
-		<div className="px-5 py-2">
+		<div className="px-5 py-10">
 			{/* hier werden die Genres in die MainButton Componente gemappt und gerendert.
 		Ziel ist es, diese in einem Slider anzuzeugen und als eigene Komponente auszulagern und auch in Home einzubinden */}
 			<div className="flex flex-col items-center justify-center gap-2 mb-5">
-				<SearchField/>
+				<SearchField />
 				<FilterButtons activeGenre={currentGenre} />
 			</div>
-			
-			<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
+
+			<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 text-black'>
 				{isLoading && <div>Lädt Filme für genre {currentGenre?.name}</div>}
 				{genreMovies.map((movie) => (
 					<MoviePreview movie={movie} key={movie.id} />
 				))}
 			</div>
-			<Footer/>
+			<Footer />
 		</div>
 	);
 };

@@ -4,4 +4,9 @@
 
 .favorite-item {
 	width: calc(100vw - 5px);
+	transition: opacity 0.25s ease-in-out;
+}
+
+.favorite-item:hover {
+	opacity: 0.8;
 }

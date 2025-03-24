@@ -5,6 +5,7 @@ import { FilterButtons } from "../../components/filterButtons/FilterButtons";
 import { TrendingMoviesCarousel } from "../../components/trendingMoviesCarousel/TrendingMoviesCarousel";
 import { Footer } from "../../components/footer/Footer";
 
+import "./Home.css"
 
 export const Home = () => {
 	return (
@@ -33,7 +34,7 @@ export const Home = () => {
 					<p className='text-black'>Trending Videos</p>
 					<Link
 						to='/genre/:genreId'
-						className='text-red transition hover:text-red/70'
+						className='see-all-button text-red transition hover:text-red/70 text-2xl'
 					>
 						See all
 					</Link>
@@ -42,8 +43,8 @@ export const Home = () => {
 				{/* Carousel */}
 
 				<TrendingMoviesCarousel />
-				
-				<Footer/>
+
+				<Footer />
 
 			</article>
 		</>
