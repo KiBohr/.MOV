@@ -1,5 +1,6 @@
 # 🎬 .Mov
-[iPhone-13-PRO-localhost-fj3x41z0eqg7ao.webm](https://github.com/user-attachments/assets/38971eed-34ec-46cd-9d45-2709d2e3439c)
+
+[Mov_Screenrecord.webm](https://github.com/user-attachments/assets/d3ceac60-fe7b-4256-b83e-35e94e46881a)
 
 A modern, responsive web app for discovering and browsing movies, based on the TMDb API. Built with **React**, **TypeScript**, and **Vite**.
 
