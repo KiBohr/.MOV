@@ -29,7 +29,7 @@ export const MoviePreview: React.FunctionComponent<Props> = ({ movie }) => {
 						<h3 className='text-lg font-bold'>{movie.title}</h3>
 						<img
 							className='h-4 cursor-pointer'
-							src='/public/img/favorite-icon.png'
+							src='/img/favorite-icon.png'
 							alt='Favoriten Icon'
 						/>
 					</div>
@@ -37,7 +37,7 @@ export const MoviePreview: React.FunctionComponent<Props> = ({ movie }) => {
 					{/* rating, year, genre & runtime */}
 					<div className='flex justify-between items-center'>
 						<div className='flex items-center font-semibold'>
-							<img src='/public/img/star.png' alt='picture of a star' />
+							<img src='/img/star.png' alt='picture of a star' />
 							<p>{movie.popularity.toFixed(1)}</p>
 						</div>
 						<p>{movie.release_date.slice(0, 4)}</p>

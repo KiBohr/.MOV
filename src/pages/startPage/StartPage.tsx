@@ -24,7 +24,7 @@ const StartPage = () => {
 				<div className={`transition-opacity duration-1000 ${fadeIn ? "opacity-100" : "opacity-0"}`}>
 					<section className="start-page flex flex-col items-center gap-4 z-[2]">
 						<div className="h-110 w-[90%] overflow-hidden bg-linear-to-bl from-red to-white rounded-t-4xl pt-10 px-5 mb-5">
-							<img className="block object-cover" src="/public/img/intro-img.png" alt="Screenshots of the app" />
+							<img className="block object-cover mx-auto" src="/img/intro-img.png" alt="Screenshots of the app" />
 						</div>
 
 						<div className="flex flex-col items-center text-2xl font-bold text-black">
@@ -42,7 +42,7 @@ const StartPage = () => {
 				</div>
 			)}
 		</section>
-		
+
 	);
 };
 
