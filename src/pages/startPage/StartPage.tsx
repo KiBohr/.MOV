@@ -12,7 +12,7 @@ const StartPage = () => {
 		const timer = setTimeout(() => {
 			setShowIntro(false);
 			setTimeout(() => setFadeIn(true), 100); // Verzögerung für sanftes Einblenden
-		}, 4000);
+		}, 6000);
 		return () => clearTimeout(timer);
 	}, []);
 
