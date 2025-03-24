@@ -38,7 +38,7 @@ export const TrendingMoviesCarousel: React.FunctionComponent<Props> = ({ trendin
 
 						<div className="absolute bottom-2 left-0 right-0 p-4 z-20 text-white">
 							<h2 className="text-4xl font-bold text-center tracking-[4px] mb-[10vh]">{!movie.title ? movie.original_title : movie.title}</h2>
-							<p className="text-2xl line-clamp-3 flex justify-end mr-5">⭐{movie.vote_average} / 10</p>
+							<p className="text-2xl line-clamp-3 flex justify-end mr-5">⭐{movie.vote_average.toFixed(1)} / 10</p>
 						</div>
 					</Link>
 
