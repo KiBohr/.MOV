@@ -5,8 +5,18 @@
 	/* colors: */
 	--color-red: #fc2121;
 	--color-red-light: #fff3f3;
-	--color-text-black: #ffffff;
-	--color-bg: #000000;
+	--color-text-black: #18171c;
+	--color-bg: #f7f9ef;
+	--color-grey-light: #e6e6e6;
+	--color-white: #ffffff;
+	--transition: 0.4s all ease-in-out;
+}
+
+:root {
+	--color-red: #fc2121;
+	--color-red-light: #fff3f3;
+	--font-color: #18171c;
+	--color-bg: #f7f9ef;
 	--color-grey-light: #e6e6e6;
 	--color-white: #ffffff;
 	--transition: 0.4s all ease-in-out;
@@ -21,9 +31,9 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	background-color: var(--color-white);
+	background-color: var(--color-bg);
 	min-height: 100vh;
-	color: var(--color-black);
+	color: var(--font-color);
 }
 
 input,
