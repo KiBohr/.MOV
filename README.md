@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# 🎬 Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web app for discovering and browsing movies, based on the TMDb API. Built with **React**, **TypeScript**, and **Vite**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Home page with movie preview
+- Genre-based filtering
+- Detailed movie view
+- Search functionality
+- Trending movies carousel
+- Responsive design
+- Integration of TMDb resources
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [TMDb API](https://www.themoviedb.org/documentation/api)
+- CSS Modules
+- Context API
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/movie-explorer.git
+cd movie-explorer
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> The app will run by default at `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Project Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+.
+├── public/                 # Static assets (images, fonts)
+├── src/                   # Main source code
+│   ├── components/        # Reusable UI components
+│   ├── pages/             # Pages (Home, Detail, NotFound etc.)
+│   ├── context/           # Global state (Context API)
+│   ├── contracts/         # TypeScript interfaces
+│   ├── layout/            # Layout components
+│   ├── assets/            # Other assets (e.g. SVGs)
+├── index.html             # Entry point
+├── package.json           # Project dependencies & scripts
+├── vite.config.ts         # Vite configuration
 ```
+
+## 📜 License
+
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for more information.
+
+---
+
+> Icons and movie data provided courtesy of [TMDb](https://www.themoviedb.org/).
