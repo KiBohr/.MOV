@@ -37,8 +37,8 @@ export const MoviePreview: React.FunctionComponent<Props> = ({ movie }) => {
 					{/* rating, year, genre & runtime */}
 					<div className='flex justify-between items-center'>
 						<div className='flex items-center font-semibold'>
-							<img src='/img/star.png' alt='picture of a star' />
-							<p>{movie.popularity.toFixed(1)}</p>
+							
+							<p>⭐️ {movie.vote_average.toFixed(1)}</p>
 						</div>
 						<p>{movie.release_date.slice(0, 4)}</p>
 						{/* hier müsste entweder das interface oder der ausgewählte fetch geändert werden(Moviedeatils), um auf genre und runtime zugreifen zu können */}

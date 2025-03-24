@@ -68,7 +68,7 @@ export const MovieDetail = () => {
 					<p className="text-3xl font-bold">{movieItem.title.split(` `).slice(0, 4).join(` `)} <br /></p>
 					<p className="text-3xl font-bold mb-2">{movieItem.title.split(` `).slice(4).join(` `)}</p>
 					<div className="flex gap-8 items-center justify-center">
-						<p className="cursor-pointer">⭐️{movieItem.vote_average.toFixed(1)}</p>
+						<p className="cursor-pointer">⭐️ {movieItem.vote_average.toFixed(1)}</p>
 						<p className="cursor-pointer">{movieItem.release_date.slice(0, 4)}</p>
 						<p className="cursor-pointer">{movieItem.genres[0].name}</p>
 						<p className="cursor-pointer">{movieItem.runtime > 0 ? `${movieItem.runtime} min` : " "}</p>
