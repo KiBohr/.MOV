@@ -9,7 +9,7 @@ import StartPage from "./pages/startPage/StartPage";
 import { Home } from "./pages/home/Home";
 import { GenreView } from "./pages/genreView/GenreView";
 import { MovieDetail } from "./pages/movieDetail/MovieDetail";
-import NotFound from "./pages/notFound/notFound";
+import NotFound from "./pages/notFound/NotFound";
 
 export function App() {
 	//hier kommt ein useState hin
