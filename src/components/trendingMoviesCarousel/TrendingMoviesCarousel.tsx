@@ -9,7 +9,7 @@ interface Props {
 	trending?: Movie;
 }
 
-export const TrendingMoviesCarousel: React.FunctionComponent<Props> = ({ trending }) => {
+export const TrendingMoviesCarousel: React.FunctionComponent<Props> = () => {
 
 	const { trendingMovies } = useContext(mainContext) as MovieContext;
 
